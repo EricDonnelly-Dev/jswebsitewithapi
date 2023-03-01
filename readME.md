@@ -1,9 +1,9 @@
 ### 🛠 Requirements:
 
 1. Fetch data from an API (resource provided below) and display up to 30 items from that request in your HTML.
-   - [ ] In your HTML you will display the array of data you get back (i.e. if it was an array of movies, you would display the list of movies).
-   - [ ] Display a minimum of 3 values from the object in the array of data you get back for each item. (i.e. movie name, movie description, cover image).
-2. - [ ]  HTML for each item should be created programmatically. 
+   - [x] In your HTML you will display the array of data you get back (i.e. if it was an array of movies, you would display the list of movies).
+   - [x] Display a minimum of 3 values from the object in the array of data you get back for each item. (i.e. movie name, movie description, cover image).
+2. - [x]  HTML for each item should be created programmatically. 
     - This means the html is created  based on the data received from the API - if 10 items are fetched, 10 blocks of HTML are created to display the data, etc.
 3. - [ ] Build a function to add selected items from the array of data to a "favorites" list. i.e.:
         - You fetch a list of 30 movies from an API and display it in a "collection" in your HTML.
