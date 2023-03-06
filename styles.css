@@ -27,7 +27,7 @@
 
 }
 .card{
-    max-width: 300px;
+    max-width: 400px;
     padding: var(--size-20) var(--size-30) 3rem;
     box-shadow: 0 0 10px rgba(48,63,100,0.15);
     background-color: white;
@@ -46,7 +46,6 @@
 
 }
 .recipe-img-wrapper {
-
     margin: 2rem auto 0;
     width: 100%
 }
@@ -58,20 +57,26 @@
     display: flex;
     justify-content: space-around;
     text-align: center;
+    position: relative;
+    flex-wrap: wrap;
+    margin-top: 2rem;
 }
 .recipe-header .recipe-title {
-    flex : 2;
+   width: 100%;
     text-transform: capitalize;
 }
 .recipe-header .other-header-info {
     padding: .25rem .33rem ;
     background: cornsilk;
     border-radius: 25%;
+    width: 40%;
 }
 .recipe-header i {
     font-size: 32px;
     margin-left: 2rem;
-
+    position: absolute;
+    right: 0;
+    top: -1.75rem;
 }
 .recipe-header i.favourite {color: red;
 }
