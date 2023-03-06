@@ -1,4 +1,5 @@
  // TODO: HIDE THIS WHEN PUSHING
+ let apiKey;
 let data =  [
         {
             "vegetarian": true,
@@ -5644,10 +5645,1014 @@ let data =  [
             ],
             "originalId": null,
             "spoonacularSourceUrl": "https://spoonacular.com/jalapeno-cornbread-stuffing-648348"
-        }
+        },
+        {
+        "vegetarian": true,
+        "vegan": false,
+        "glutenFree": false,
+        "dairyFree": false,
+        "veryHealthy": false,
+        "cheap": false,
+        "veryPopular": false,
+        "sustainable": false,
+        "lowFodmap": false,
+        "weightWatcherSmartPoints": 1,
+        "gaps": "no",
+        "preparationMinutes": -1,
+        "cookingMinutes": -1,
+        "aggregateLikes": 24,
+        "healthScore": 0,
+        "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+        "license": "CC BY 3.0",
+        "sourceName": "Foodista",
+        "pricePerServing": 9.19,
+        "extendedIngredients": [
+            {
+                "id": 1001,
+                "aisle": "Milk, Eggs, Other Dairy",
+                "image": "butter-sliced.jpg",
+                "consistency": "SOLID",
+                "name": "butter",
+                "nameClean": "butter",
+                "original": "1/2 cup butter, soften (I used brumble & brown)",
+                "originalName": "butter, soften (I used brumble & brown)",
+                "amount": 0.5,
+                "unit": "cup",
+                "meta": [
+                    "(I used brumble & brown)"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 0.5,
+                        "unitShort": "cups",
+                        "unitLong": "cups"
+                    },
+                    "metric": {
+                        "amount": 118.294,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 19334,
+                "aisle": "Baking",
+                "image": "light-brown-sugar.jpg",
+                "consistency": "SOLID",
+                "name": "brown sugar",
+                "nameClean": "golden brown sugar",
+                "original": "1/2 cup brown sugar (they said 1 cup)",
+                "originalName": "brown sugar (they said 1 cup)",
+                "amount": 0.5,
+                "unit": "cup",
+                "meta": [
+                    "(they said 1 cup)"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 0.5,
+                        "unitShort": "cups",
+                        "unitLong": "cups"
+                    },
+                    "metric": {
+                        "amount": 118.294,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 19911,
+                "aisle": "Cereal",
+                "image": "maple-syrup.png",
+                "consistency": "LIQUID",
+                "name": "maple syrup",
+                "nameClean": "maple syrup",
+                "original": "1 Tbsp. maple syrup",
+                "originalName": "maple syrup",
+                "amount": 1.0,
+                "unit": "Tbsp",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "Tbsp",
+                        "unitLong": "Tbsp"
+                    },
+                    "metric": {
+                        "amount": 1.0,
+                        "unitShort": "Tbsp",
+                        "unitLong": "Tbsp"
+                    }
+                }
+            },
+            {
+                "id": 18372,
+                "aisle": "Baking",
+                "image": "white-powder.jpg",
+                "consistency": "SOLID",
+                "name": "baking soda",
+                "nameClean": "baking soda",
+                "original": "2 tsp. baking soda",
+                "originalName": "baking soda",
+                "amount": 2.0,
+                "unit": "tsp",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 2.0,
+                        "unitShort": "tsps",
+                        "unitLong": "teaspoons"
+                    },
+                    "metric": {
+                        "amount": 2.0,
+                        "unitShort": "tsps",
+                        "unitLong": "teaspoons"
+                    }
+                }
+            },
+            {
+                "id": 1012010,
+                "aisle": "Spices and Seasonings",
+                "image": "cinnamon.jpg",
+                "consistency": "SOLID",
+                "name": "ground cinnamon",
+                "nameClean": "ground cinnamon",
+                "original": "1 tsp. ground cinnamon",
+                "originalName": "ground cinnamon",
+                "amount": 1.0,
+                "unit": "tsp",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    },
+                    "metric": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    }
+                }
+            },
+            {
+                "id": 2021,
+                "aisle": "Spices and Seasonings",
+                "image": "ginger.png",
+                "consistency": "SOLID",
+                "name": "ground ginger",
+                "nameClean": "ginger powder",
+                "original": "1 tsp. ground ginger",
+                "originalName": "ground ginger",
+                "amount": 1.0,
+                "unit": "tsp",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    },
+                    "metric": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    }
+                }
+            },
+            {
+                "id": 2047,
+                "aisle": "Spices and Seasonings",
+                "image": "salt.jpg",
+                "consistency": "SOLID",
+                "name": "salt",
+                "nameClean": "table salt",
+                "original": "1/4 tsp. salt",
+                "originalName": "salt",
+                "amount": 0.25,
+                "unit": "tsp",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 0.25,
+                        "unitShort": "tsps",
+                        "unitLong": "teaspoons"
+                    },
+                    "metric": {
+                        "amount": 0.25,
+                        "unitShort": "tsps",
+                        "unitLong": "teaspoons"
+                    }
+                }
+            },
+            {
+                "id": 1123,
+                "aisle": "Milk, Eggs, Other Dairy",
+                "image": "egg.png",
+                "consistency": "SOLID",
+                "name": "egg",
+                "nameClean": "egg",
+                "original": "1 egg or substitute",
+                "originalName": "egg or substitute",
+                "amount": 1.0,
+                "unit": "",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "",
+                        "unitLong": ""
+                    },
+                    "metric": {
+                        "amount": 1.0,
+                        "unitShort": "",
+                        "unitLong": ""
+                    }
+                }
+            },
+            {
+                "id": 9019,
+                "aisle": "Canned and Jarred",
+                "image": "applesauce.png",
+                "consistency": "SOLID",
+                "name": "applesauce",
+                "nameClean": "applesauce",
+                "original": "1/4 cup unsweetened applesauce",
+                "originalName": "unsweetened applesauce",
+                "amount": 0.25,
+                "unit": "cup",
+                "meta": [
+                    "unsweetened"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 0.25,
+                        "unitShort": "cups",
+                        "unitLong": "cups"
+                    },
+                    "metric": {
+                        "amount": 59.147,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 2050,
+                "aisle": "Baking",
+                "image": "vanilla-extract.jpg",
+                "consistency": "LIQUID",
+                "name": "vanilla extract",
+                "nameClean": "vanilla extract",
+                "original": "1 tsp. vanilla extract",
+                "originalName": "vanilla extract",
+                "amount": 1.0,
+                "unit": "tsp",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    },
+                    "metric": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    }
+                }
+            },
+            {
+                "id": 10020080,
+                "aisle": "Baking",
+                "image": "flour.png",
+                "consistency": "SOLID",
+                "name": "pastry flour",
+                "nameClean": "whole wheat pastry flour",
+                "original": "1 cup whole wheat pastry flour",
+                "originalName": "whole wheat pastry flour",
+                "amount": 1.0,
+                "unit": "cup",
+                "meta": [
+                    "whole wheat"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "cup",
+                        "unitLong": "cup"
+                    },
+                    "metric": {
+                        "amount": 236.588,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 93824,
+                "aisle": "Baking",
+                "image": "flour.png",
+                "consistency": "SOLID",
+                "name": "flour",
+                "nameClean": "white whole wheat flour",
+                "original": "1 cup white whole wheat flour",
+                "originalName": "white whole wheat flour",
+                "amount": 1.0,
+                "unit": "cup",
+                "meta": [
+                    "whole wheat",
+                    "white"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "cup",
+                        "unitLong": "cup"
+                    },
+                    "metric": {
+                        "amount": 236.588,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 11124,
+                "aisle": "Produce",
+                "image": "sliced-carrot.png",
+                "consistency": "SOLID",
+                "name": "carrots",
+                "nameClean": "carrot",
+                "original": "1 cup finely shredded carrots (about 2 medium)",
+                "originalName": "finely shredded carrots (about 2 medium)",
+                "amount": 1.0,
+                "unit": "cup",
+                "meta": [
+                    "shredded",
+                    "finely",
+                    "( 2 medium)"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "cup",
+                        "unitLong": "cup"
+                    },
+                    "metric": {
+                        "amount": 236.588,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 9299,
+                "aisle": "Dried Fruits;Produce;Baking",
+                "image": "raisins.jpg",
+                "consistency": "SOLID",
+                "name": "raisin",
+                "nameClean": "raisins",
+                "original": "3/4 cup raisin",
+                "originalName": "raisin",
+                "amount": 0.75,
+                "unit": "cup",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 0.75,
+                        "unitShort": "cups",
+                        "unitLong": "cups"
+                    },
+                    "metric": {
+                        "amount": 177.441,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 10112155,
+                "aisle": "Nuts;Savory Snacks;Baking",
+                "image": "walnuts.jpg",
+                "consistency": "SOLID",
+                "name": "walnuts",
+                "nameClean": "walnut pieces",
+                "original": "1/2 cup chopped walnuts (recipe calls for 3/4 cup, but I only had half, add more)",
+                "originalName": "chopped walnuts (recipe calls for 3/4 cup, but I only had half, add more)",
+                "amount": 0.5,
+                "unit": "cup",
+                "meta": [
+                    "chopped",
+                    "for 3/4 cup, but i only had half, add more",
+                    "(recipe calls )"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 0.5,
+                        "unitShort": "cups",
+                        "unitLong": "cups"
+                    },
+                    "metric": {
+                        "amount": 118.294,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 19908,
+                "aisle": "Baking",
+                "image": "raw-brown-sugar.png",
+                "consistency": "SOLID",
+                "name": "turbinado sugar",
+                "nameClean": "turbinado sugar",
+                "original": "1/2 Tbsp Turbinado Sugar",
+                "originalName": "Turbinado Sugar",
+                "amount": 0.5,
+                "unit": "Tbsp",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 0.5,
+                        "unitShort": "Tbsps",
+                        "unitLong": "Tbsps"
+                    },
+                    "metric": {
+                        "amount": 0.5,
+                        "unitShort": "Tbsps",
+                        "unitLong": "Tbsps"
+                    }
+                }
+            }
+        ],
+        "id": 637181,
+        "title": "Carrot Cake Muffin Cookies",
+        "readyInMinutes": 45,
+        "servings": 64,
+        "sourceUrl": "https://www.foodista.com/recipe/MS6VMCQG/carrot-cake-muffin-cookies",
+        "image": "https://spoonacular.com/recipeImages/637181-556x370.jpg",
+        "imageType": "jpg",
+        "summary": "Carrot Cake Muffin Cookies might be just the dessert you are searching for. Watching your figure? This lacto ovo vegetarian recipe has <b>47 calories</b>, <b>1g of protein</b>, and <b>2g of fat</b> per serving. This recipe serves 64 and costs 9 cents per serving. 24 people were glad they tried this recipe. If you have vanillan extract, ground ginger, turbinado sugar, and a few other ingredients on hand, you can make it. From preparation to the plate, this recipe takes around <b>45 minutes</b>. <b>Easter</b> will be even more special with this recipe. It is brought to you by Foodista. Taking all factors into account, this recipe <b>earns a spoonacular score of 10%</b>, which is improvable. If you like this recipe, you might also like recipes such as <a href=\"https://spoonacular.com/recipes/single-serving-microwave-carrot-cake-muffin-523340\">Single-Serving Microwave Carrot Cake Muffin</a>, <a href=\"https://spoonacular.com/recipes/single-serving-microwave-carrot-cake-muffin-1217901\">Single-Serving Microwave Carrot Cake Muffin</a>, and <a href=\"https://spoonacular.com/recipes/carrot-cake-cookies-41261\">Carrot-cake Cookies</a>.",
+        "cuisines": [],
+        "dishTypes": [
+            "dessert"
+        ],
+        "diets": [
+            "lacto ovo vegetarian"
+        ],
+        "occasions": [
+            "easter"
+        ],
+        "instructions": "Preheat oven to 350\nIn a large bowl beat the butter with an electric mixer on medium speed for 30 seconds.\nAdd brown sugar, maple syrup, baking soda, cinnamon, ginger and salt. Beat until combined.\nBeat in egg, applesauce and vanilla. Beat in as much flour as you can with mixer. Stir in remaining flour, carrots, raisins, walnuts just until combined.\nDrop by slightly rounded teaspoons 2 apart onto an ungreased cookie sheet. Sprinkle with Turbinado sugar. Bake 8  10 minutes or until edges are firm. Transfer to a wire rack: cool.",
+        "analyzedInstructions": [
+            {
+                "name": "",
+                "steps": [
+                    {
+                        "number": 1,
+                        "step": "Preheat oven to 350",
+                        "ingredients": [],
+                        "equipment": [
+                            {
+                                "id": 404784,
+                                "name": "oven",
+                                "localizedName": "oven",
+                                "image": "oven.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "number": 2,
+                        "step": "In a large bowl beat the butter with an electric mixer on medium speed for 30 seconds.",
+                        "ingredients": [
+                            {
+                                "id": 1001,
+                                "name": "butter",
+                                "localizedName": "butter",
+                                "image": "butter-sliced.jpg"
+                            }
+                        ],
+                        "equipment": [
+                            {
+                                "id": 404628,
+                                "name": "hand mixer",
+                                "localizedName": "hand mixer",
+                                "image": "hand-mixer.png"
+                            },
+                            {
+                                "id": 404783,
+                                "name": "bowl",
+                                "localizedName": "bowl",
+                                "image": "bowl.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "number": 3,
+                        "step": "Add brown sugar, maple syrup, baking soda, cinnamon, ginger and salt. Beat until combined.",
+                        "ingredients": [
+                            {
+                                "id": 18372,
+                                "name": "baking soda",
+                                "localizedName": "baking soda",
+                                "image": "white-powder.jpg"
+                            },
+                            {
+                                "id": 19334,
+                                "name": "brown sugar",
+                                "localizedName": "brown sugar",
+                                "image": "dark-brown-sugar.png"
+                            },
+                            {
+                                "id": 19911,
+                                "name": "maple syrup",
+                                "localizedName": "maple syrup",
+                                "image": "maple-syrup.png"
+                            },
+                            {
+                                "id": 2010,
+                                "name": "cinnamon",
+                                "localizedName": "cinnamon",
+                                "image": "cinnamon.jpg"
+                            },
+                            {
+                                "id": 11216,
+                                "name": "ginger",
+                                "localizedName": "ginger",
+                                "image": "ginger.png"
+                            },
+                            {
+                                "id": 2047,
+                                "name": "salt",
+                                "localizedName": "salt",
+                                "image": "salt.jpg"
+                            }
+                        ],
+                        "equipment": []
+                    },
+                    {
+                        "number": 4,
+                        "step": "Beat in egg, applesauce and vanilla. Beat in as much flour as you can with mixer. Stir in remaining flour, carrots, raisins, walnuts just until combined.",
+                        "ingredients": [
+                            {
+                                "id": 9019,
+                                "name": "applesauce",
+                                "localizedName": "applesauce",
+                                "image": "applesauce.png"
+                            },
+                            {
+                                "id": 11124,
+                                "name": "carrot",
+                                "localizedName": "carrot",
+                                "image": "sliced-carrot.png"
+                            },
+                            {
+                                "id": 9299,
+                                "name": "raisins",
+                                "localizedName": "raisins",
+                                "image": "raisins.jpg"
+                            },
+                            {
+                                "id": 1052050,
+                                "name": "vanilla",
+                                "localizedName": "vanilla",
+                                "image": "vanilla.jpg"
+                            },
+                            {
+                                "id": 12155,
+                                "name": "walnuts",
+                                "localizedName": "walnuts",
+                                "image": "walnuts.jpg"
+                            },
+                            {
+                                "id": 20081,
+                                "name": "all purpose flour",
+                                "localizedName": "all purpose flour",
+                                "image": "flour.png"
+                            },
+                            {
+                                "id": 1123,
+                                "name": "egg",
+                                "localizedName": "egg",
+                                "image": "egg.png"
+                            }
+                        ],
+                        "equipment": [
+                            {
+                                "id": 404726,
+                                "name": "blender",
+                                "localizedName": "blender",
+                                "image": "blender.png"
+                            }
+                        ]
+                    },
+                    {
+                        "number": 5,
+                        "step": "Drop by slightly rounded teaspoons 2 apart onto an ungreased cookie sheet.",
+                        "ingredients": [
+                            {
+                                "id": 10118192,
+                                "name": "cookies",
+                                "localizedName": "cookies",
+                                "image": "shortbread-cookies.jpg"
+                            }
+                        ],
+                        "equipment": [
+                            {
+                                "id": 404727,
+                                "name": "baking sheet",
+                                "localizedName": "baking sheet",
+                                "image": "baking-sheet.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "number": 6,
+                        "step": "Sprinkle with Turbinado sugar.",
+                        "ingredients": [
+                            {
+                                "id": 19908,
+                                "name": "turbinado sugar",
+                                "localizedName": "turbinado sugar",
+                                "image": "raw-brown-sugar.png"
+                            }
+                        ],
+                        "equipment": []
+                    },
+                    {
+                        "number": 7,
+                        "step": "Bake 8  10 minutes or until edges are firm.",
+                        "ingredients": [],
+                        "equipment": [
+                            {
+                                "id": 404784,
+                                "name": "oven",
+                                "localizedName": "oven",
+                                "image": "oven.jpg"
+                            }
+                        ],
+                        "length": {
+                            "number": 10,
+                            "unit": "minutes"
+                        }
+                    },
+                    {
+                        "number": 8,
+                        "step": "Transfer to a wire rack: cool.",
+                        "ingredients": [],
+                        "equipment": [
+                            {
+                                "id": 405900,
+                                "name": "wire rack",
+                                "localizedName": "wire rack",
+                                "image": "wire-rack.jpg"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "originalId": null,
+        "spoonacularSourceUrl": "https://spoonacular.com/carrot-cake-muffin-cookies-637181"
+    },
+        {
+        "vegetarian": false,
+        "vegan": false,
+        "glutenFree": false,
+        "dairyFree": true,
+        "veryHealthy": false,
+        "cheap": false,
+        "veryPopular": false,
+        "sustainable": false,
+        "lowFodmap": false,
+        "weightWatcherSmartPoints": 6,
+        "gaps": "no",
+        "preparationMinutes": -1,
+        "cookingMinutes": -1,
+        "aggregateLikes": 11,
+        "healthScore": 22,
+        "creditsText": "Foodista.com – The Cooking Encyclopedia Everyone Can Edit",
+        "license": "CC BY 3.0",
+        "sourceName": "Foodista",
+        "pricePerServing": 63.99,
+        "extendedIngredients": [
+            {
+                "id": 11819,
+                "aisle": "Produce",
+                "image": "red-chili.jpg",
+                "consistency": "SOLID",
+                "name": "chili pepper flakes",
+                "nameClean": "chili pepper",
+                "original": "1 teaspoon chili pepper flakes (optional)",
+                "originalName": "chili pepper flakes (optional)",
+                "amount": 1.0,
+                "unit": "teaspoon",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    },
+                    "metric": {
+                        "amount": 1.0,
+                        "unitShort": "tsp",
+                        "unitLong": "teaspoon"
+                    }
+                }
+            },
+            {
+                "id": 1034053,
+                "aisle": "Oil, Vinegar, Salad Dressing",
+                "image": "olive-oil.jpg",
+                "consistency": "LIQUID",
+                "name": "extra virgin olive oil",
+                "nameClean": "extra virgin olive oil",
+                "original": "1/3 cup extra virgin olive oil",
+                "originalName": "extra virgin olive oil",
+                "amount": 0.33333334,
+                "unit": "cup",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 0.333,
+                        "unitShort": "cups",
+                        "unitLong": "cups"
+                    },
+                    "metric": {
+                        "amount": 78.863,
+                        "unitShort": "ml",
+                        "unitLong": "milliliters"
+                    }
+                }
+            },
+            {
+                "id": 2012,
+                "aisle": "Spices and Seasonings",
+                "image": "ground-coriander.jpg",
+                "consistency": "SOLID",
+                "name": "coriander leaves",
+                "nameClean": "dried cilantro",
+                "original": "3 tablespoons coriander (cilantro) leaves, chopped",
+                "originalName": "coriander (cilantro) leaves, chopped",
+                "amount": 3.0,
+                "unit": "tablespoons",
+                "meta": [
+                    "chopped",
+                    "(cilantro)"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 3.0,
+                        "unitShort": "Tbsps",
+                        "unitLong": "Tbsps"
+                    },
+                    "metric": {
+                        "amount": 3.0,
+                        "unitShort": "Tbsps",
+                        "unitLong": "Tbsps"
+                    }
+                }
+            },
+            {
+                "id": 11215,
+                "aisle": "Produce",
+                "image": "garlic.png",
+                "consistency": "SOLID",
+                "name": "garlic",
+                "nameClean": "garlic",
+                "original": "garlic, minced",
+                "originalName": "garlic, minced",
+                "amount": 4.0,
+                "unit": "servings",
+                "meta": [
+                    "minced"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 4.0,
+                        "unitShort": "servings",
+                        "unitLong": "servings"
+                    },
+                    "metric": {
+                        "amount": 4.0,
+                        "unitShort": "servings",
+                        "unitLong": "servings"
+                    }
+                }
+            },
+            {
+                "id": 11020420,
+                "aisle": "Pasta and Rice",
+                "image": "shell-pasta.jpg",
+                "consistency": "SOLID",
+                "name": "shrimp",
+                "nameClean": "pasta shells",
+                "original": "20 jumbo shrimp, shells removed",
+                "originalName": "shrimp, shells removed",
+                "amount": 20.0,
+                "unit": "jumbo",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 20.0,
+                        "unitShort": "jumbo",
+                        "unitLong": "jumbos"
+                    },
+                    "metric": {
+                        "amount": 20.0,
+                        "unitShort": "jumbo",
+                        "unitLong": "jumbos"
+                    }
+                }
+            },
+            {
+                "id": 9156,
+                "aisle": "Produce",
+                "image": "zest-lemon.jpg",
+                "consistency": "SOLID",
+                "name": "lemon zest",
+                "nameClean": "lemon peel",
+                "original": "1 tablespoon lemon zest",
+                "originalName": "lemon zest",
+                "amount": 1.0,
+                "unit": "tablespoon",
+                "meta": [],
+                "measures": {
+                    "us": {
+                        "amount": 1.0,
+                        "unitShort": "Tbsp",
+                        "unitLong": "Tbsp"
+                    },
+                    "metric": {
+                        "amount": 1.0,
+                        "unitShort": "Tbsp",
+                        "unitLong": "Tbsp"
+                    }
+                }
+            },
+            {
+                "id": 11297,
+                "aisle": "Produce;Spices and Seasonings",
+                "image": "parsley.jpg",
+                "consistency": "SOLID",
+                "name": "parsley",
+                "nameClean": "parsley",
+                "original": "3 tablespoons chopped parsley",
+                "originalName": "chopped parsley",
+                "amount": 3.0,
+                "unit": "tablespoons",
+                "meta": [
+                    "chopped"
+                ],
+                "measures": {
+                    "us": {
+                        "amount": 3.0,
+                        "unitShort": "Tbsps",
+                        "unitLong": "Tbsps"
+                    },
+                    "metric": {
+                        "amount": 3.0,
+                        "unitShort": "Tbsps",
+                        "unitLong": "Tbsps"
+                    }
+                }
+            }
+        ],
+        "id": 645721,
+        "title": "Grilled Garlicky-Herbed Shrimp",
+        "readyInMinutes": 45,
+        "servings": 4,
+        "sourceUrl": "http://www.foodista.com/recipe/XVTYTLSS/grilled-garlicky-herbed-shrimp",
+        "image": "https://spoonacular.com/recipeImages/645721-556x370.jpg",
+        "imageType": "jpg",
+        "summary": "Grilled Garlicky-Herbed Shrimp takes around <b>45 minutes</b> from beginning to end. For <b>64 cents per serving</b>, you get a hor d'oeuvre that serves 4. Watching your figure? This dairy free recipe has <b>189 calories</b>, <b>1g of protein</b>, and <b>18g of fat</b> per serving. 11 person were glad they tried this recipe. A mixture of chili pepper flakes, garlic, lemon zest, and a handful of other ingredients are all it takes to make this recipe so flavorful. It is perfect for <b>The Fourth Of July</b>. It is brought to you by Foodista. With a spoonacular <b>score of 52%</b>, this dish is solid. Similar recipes are <a href=\"https://spoonacular.com/recipes/grilled-garlicky-herbed-shrimp-1352351\">Grilled Garlicky-Herbed Shrimp</a>, <a href=\"https://spoonacular.com/recipes/grilled-garlicky-herbed-shrimp-1364413\">Grilled Garlicky-Herbed Shrimp</a>, and <a href=\"https://spoonacular.com/recipes/grilled-garlicky-herbed-shrimp-1267345\">Grilled Garlicky-Herbed Shrimp</a>.",
+        "cuisines": [],
+        "dishTypes": [
+            "antipasti",
+            "starter",
+            "snack",
+            "appetizer",
+            "antipasto",
+            "hor d'oeuvre"
+        ],
+        "diets": [
+            "dairy free"
+        ],
+        "occasions": [
+            "father's day",
+            "4th of july",
+            "summer"
+        ],
+        "instructions": "<ol><li>Combine all ingredients except shrimp in a large bowl. Add shrimp and toss to combine making sure all parts of the shrimp is coated in the marinade. Refrigerate 4 hours or overnight. Preheat grill on medium heat. Place shrimp on grill and cook, turning once, until pink  about 5 minutes.</li><li>The Culinary Chases Note: Want a Mediterranean feel?  Serve the shrimp with a roasted red pepper salad. Enjoy!</li></ol>",
+        "analyzedInstructions": [
+            {
+                "name": "",
+                "steps": [
+                    {
+                        "number": 1,
+                        "step": "Combine all ingredients except shrimp in a large bowl.",
+                        "ingredients": [
+                            {
+                                "id": 15270,
+                                "name": "shrimp",
+                                "localizedName": "shrimp",
+                                "image": "shrimp.png"
+                            }
+                        ],
+                        "equipment": [
+                            {
+                                "id": 404783,
+                                "name": "bowl",
+                                "localizedName": "bowl",
+                                "image": "bowl.jpg"
+                            }
+                        ]
+                    },
+                    {
+                        "number": 2,
+                        "step": "Add shrimp and toss to combine making sure all parts of the shrimp is coated in the marinade. Refrigerate 4 hours or overnight. Preheat grill on medium heat.",
+                        "ingredients": [
+                            {
+                                "id": 0,
+                                "name": "marinade",
+                                "localizedName": "marinade",
+                                "image": "seasoning.png"
+                            },
+                            {
+                                "id": 15270,
+                                "name": "shrimp",
+                                "localizedName": "shrimp",
+                                "image": "shrimp.png"
+                            }
+                        ],
+                        "equipment": [
+                            {
+                                "id": 404706,
+                                "name": "grill",
+                                "localizedName": "grill",
+                                "image": "grill.jpg"
+                            }
+                        ],
+                        "length": {
+                            "number": 240,
+                            "unit": "minutes"
+                        }
+                    },
+                    {
+                        "number": 3,
+                        "step": "Place shrimp on grill and cook, turning once, until pink  about 5 minutes.The Culinary Chases Note: Want a Mediterranean feel?",
+                        "ingredients": [
+                            {
+                                "id": 15270,
+                                "name": "shrimp",
+                                "localizedName": "shrimp",
+                                "image": "shrimp.png"
+                            }
+                        ],
+                        "equipment": [
+                            {
+                                "id": 404706,
+                                "name": "grill",
+                                "localizedName": "grill",
+                                "image": "grill.jpg"
+                            }
+                        ],
+                        "length": {
+                            "number": 5,
+                            "unit": "minutes"
+                        }
+                    },
+                    {
+                        "number": 4,
+                        "step": "Serve the shrimp with a roasted red pepper salad. Enjoy!",
+                        "ingredients": [
+                            {
+                                "id": 11916,
+                                "name": "roasted red peppers",
+                                "localizedName": "roasted red peppers",
+                                "image": "red-pepper.jpg"
+                            },
+                            {
+                                "id": 15270,
+                                "name": "shrimp",
+                                "localizedName": "shrimp",
+                                "image": "shrimp.png"
+                            }
+                        ],
+                        "equipment": []
+                    }
+                ]
+            }
+        ],
+        "originalId": null,
+        "spoonacularSourceUrl": "https://spoonacular.com/grilled-garlicky-herbed-shrimp-645721"
+    }
 ];
 const baseURL = 'https://api.spoonacular.com/recipes/random';
-const apiKeyParam = `?apiKey=${apiKey}`;
+const apiKeyParam = `?apiKey=${apiKey}`|| "";
 const recipesRequested = '&number=30';
 
 const requestURL = baseURL+apiKeyParam+recipesRequested;
@@ -5689,8 +6694,13 @@ function fillValues(data) {
          recipeCard.id = ID;
          const recipe = document.createElement('div');
          recipe.classList.add('recipe-header');
-         recipe.innerHTML = ` <h3>${title}</h3>
-                                <h4>${makeTime} minutes`
+         recipe.innerHTML = ` <h3 class="recipe-title">${title}</h3>   
+                             <div class="other-header-info">
+                               <h4>${servings} Servings</h4>
+                                <h4>${makeTime} Minutes</h4>
+                             </div>
+                             <i class="fa-heart fas"</i>   `
+
          const recipeImgWrapper = document.createElement('div');
          recipeImgWrapper.classList.add('recipe-img-wrapper');
          const recipeImg = document.createElement('img');
