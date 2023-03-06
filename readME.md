@@ -13,7 +13,7 @@
 5. - [ ] Build a toggle function that sorts the items in the collection and "favorites" list alphabetically (A-Z) and vice versa (Z-A).
 6.  - [ ] You must display the total sum of some piece of data from the list. (i.e. if you had a list of pokemon, you could total the number of common, rare and legendary pokemon in the list). You cannot total the number of items in the array, it must be a value from the data object.
 7.  - [ ] The website must be built with pure HTML, CSS and JavaScript (no third party css or js libraries).
-8. - [ ] The items retrieved from the API must be displayed in styled HTML. (i.e. if you were working with the pokeAPI you could display the data in a "card" design with the image, attack, hitpoints, etc).
+8. - [x] The items retrieved from the API must be displayed in styled HTML. (i.e. if you were working with the pokeAPI you could display the data in a "card" design with the image, attack, hitpoints, etc).
 9.  - [ ] The website must be mobile responsive across desktop, ipad/tablet and mobile phones.
 
 

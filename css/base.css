@@ -1,0 +1,57 @@
+:root{
+    /* Colours */
+    --clr-white:#FFF;
+    --clr-black:#000;
+    --clr-primary:#2476FF;
+    --clr-secondary:#01C9A7;
+    --clr-dots:#ECF2FF;
+    --clr-contrast: #f8fafe;
+    --font-colour-primary: #7b8ca1;
+
+    --contact-bg:#20335B;
+    --demo-bg:#F8FAFE;
+    /* Sizes */
+    --size-10:.625rem;
+    --size-14:.825rem;
+    --size-16:1rem;
+    --size-18:1.125rem;
+    --size-20:1.25rem;
+    --size-26:1.625rem ;
+    --size-30:1.875rem;
+    --size-40:2.5rem;
+    --size-50:3.125rem;
+    --size-60:3.75rem;
+    --size-80:5rem;
+    --size-100:6.25rem;
+    --size-150:9.375rem;
+
+}
+.card{
+    max-width: 400px;
+    padding: var(--size-20) var(--size-30) 3rem;
+    box-shadow: 0 0 10px rgba(48,63,100,0.15);
+    background-color: white;
+    border-radius: 2rem;
+    margin: 1rem;
+}
+.container {max-width: 1140px ;}
+
+.ul-defaults-none {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.pill {
+    display: inline-block;
+    color: #FFFFFF;
+    font-weight: 600;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 0.1rem 0.5rem;
+    margin-left: var(--size-18);
+    background-color: #01C9A7;
+    border-radius: 1.25rem;
+    max-width: var(--size-100);
+}

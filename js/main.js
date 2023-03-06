@@ -14087,7 +14087,6 @@ async function loadData() {
 
 
 function fillValues(data) {
-    console.log(data);
      for (const elm of data) {
          const {
              title,
@@ -14104,20 +14103,23 @@ function fillValues(data) {
          const recipe = document.createElement('div');
          const dishTypeGroup = document.createElement("div");
          recipe.classList.add('recipe-header');
-         recipe.innerHTML = ` <h3 class = "recipe-title"> ${title}</h3>   
+         recipe.innerHTML = ` <h2 class = "recipe-title"> ${title}</h2>   
                              <div class = "other-header-info">
                                <h4>${servings} Servings</h4>
                                <h4>${makeTime} Minutes</h4>
                              </div>
-                             <i class = "fa-heart fas"></i>   `
+                             <i class = "fa-heart fas"></i> `
+
          for (const val of dishType) {
              dishTypeGroup.classList.add('dishTypeGroup');
-             recipe.dataset.dishtype = val;
+             recipeCard.dataset.dishtype = dishType;
              const dishTypePill = document.createElement("div");
              dishTypePill.innerText = val;
              dishTypePill.classList.add('dishtype', 'pill');
              dishTypeGroup.appendChild(dishTypePill);
          }
+
+
          recipe.appendChild(dishTypeGroup);
          const recipeImgWrapper = document.createElement('div');
          recipeImgWrapper.classList.add('recipe-img-wrapper');
@@ -14129,6 +14131,39 @@ function fillValues(data) {
          recipeCard.appendChild(recipeImgWrapper);
          recipeCardGroup.appendChild(recipeCard);
      }
+
+    const setActive = (element , selector) =>{
+        if(document.querySelector(`${selector}.active`) !== null) {
+            document.querySelector(`${selector}.active`).classList.remove('active');
+        }
+        element.classList.add('active');
+    };
+
+    const filterLinks = document.querySelectorAll('[data-filter]');
+    const recipeItems = document.querySelectorAll('[data-dishType]');
+    const searchInput = document.querySelector('#search');
+
+    searchInput.addEventListener("keyup", (event) => {
+        const searchInput = event.target.value.toLowerCase().trim();
+        recipeItems.forEach((card)=>{
+            card.dataset.dishtype.includes(searchInput)
+                ? card.style.display = 'block'
+                :card.style.display ='none'
+        })
+    })
+
+    for (const filterLink of filterLinks) {
+        filterLink.addEventListener("click" , function (){
+            setActive(filterLink,'.filter-link');
+            const filter = this.dataset.filter;
+            recipeItems.forEach((card) =>{
+                if (filter === 'all') card.style.display ='block';
+                else if (card.dataset.dishtype.includes(filter) ) { card.style.display = 'block'}
+                else {card.style.display = 'none'}
+            })
+        })
+    }
+
 }
 
 
