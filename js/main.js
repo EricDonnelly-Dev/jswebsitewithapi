@@ -24,59 +24,14 @@ getRecipes();
 async function loadData(req) {
     return Promise.resolve(req)
         .then(recipes => {
+            console.log(recipes);
             createCards(recipes)
-            favouriteRecipe();
+            setupEvents()
         })
 }
 
-
-function createCards(data) {
-    for (const elm of data) {
-        const {
-            title,
-            id: ID,
-            dishTypes: dishType,
-            servings,
-            readyInMinutes: makeTime,
-            image
-        } = elm;
-        // Each data element gets needs a card
-
-        const recipeCard = document.createElement('div');
-        recipeCard.classList.add('recipe-card', 'card');
-        recipeCard.id = ID;
-        const recipe = document.createElement('div');
-        const dishTypeGroup = document.createElement("div");
-        recipe.classList.add('recipe-header');
-        recipe.innerHTML = ` <h2 class = "recipe-title"> ${title}</h2>   
-                             <div class = "other-header-info">
-                               <h4>${servings} Servings</h4>
-                               <h4>${makeTime} Minutes</h4>
-                             </div>
-                             <i class = "fa-heart fas"></i> `
-        // Assign the dishtypes to a data attribute
-        for (const val of dishType) {
-            dishTypeGroup.classList.add('dishTypeGroup');
-            recipeCard.dataset.dishtype = dishType;
-            const dishTypePill = document.createElement("div");
-            dishTypePill.innerText = val;
-            dishTypePill.classList.add('dishtype', 'pill');
-            dishTypeGroup.appendChild(dishTypePill);
-        }
-        // Append card elements to base card
-        recipe.appendChild(dishTypeGroup);
-        const recipeImgWrapper = document.createElement('div');
-        recipeImgWrapper.classList.add('recipe-img-wrapper');
-        const recipeImg = document.createElement('img');
-        recipeImg.setAttribute('src', image);
-        recipeImgWrapper.appendChild(recipeImg);
-        recipeCard.appendChild(recipe);
-        recipeCard.appendChild(recipeImgWrapper);
-
-        // Place card into appropriate card group
-        addCardToGroup(recipeCard, 'base');
-
-    }
+function setupEvents() {
+    favouriteRecipe();
 
     const setActive = (element, selector) => {
         if (document.querySelector(`${selector}.active`) !== null) {
@@ -131,7 +86,61 @@ function createCards(data) {
         recipeArray.forEach(function (elm) {
             elm.parentElement.appendChild(elm);
         });
+
     }
+}
+
+function createCards(data) {
+    for (const elm of data) {
+        const {
+            title,
+            id: ID,
+            dishTypes: dishType,
+            servings,
+            readyInMinutes: makeTime,
+            image
+        } = elm;
+        // Each data element gets needs a card
+
+        const recipeCard = document.createElement('div');
+        recipeCard.classList.add('recipe-card', 'card');
+        recipeCard.id = ID;
+        recipeCard.dataset.dishtype = 'none';
+        const recipe = document.createElement('div');
+        const dishTypeGroup = document.createElement("div");
+        recipe.classList.add('recipe-header');
+        recipe.innerHTML = ` <h2 class = "recipe-title"> ${title}</h2>   
+                             <div class = "other-header-info">
+                               <h4 class="servings">${servings} Servings</h4>
+                               <h4 class="minutes">${makeTime} Minutes</h4>
+                             </div>
+                             <i class = "fa-heart fas"></i> `
+        // Assign the dishtypes to a data attribute
+        for (const val of dishType) {
+            dishTypeGroup.classList.add('dishTypeGroup');
+            recipeCard.dataset.dishtype = dishType;
+            const dishTypePill = document.createElement("div");
+            dishTypePill.innerText = val;
+            dishTypePill.classList.add('dishtype', 'pill');
+            dishTypeGroup.appendChild(dishTypePill);
+        }
+        // Append card elements to base card
+        recipe.appendChild(dishTypeGroup);
+        const recipeImgWrapper = document.createElement('div');
+        recipeImgWrapper.classList.add('recipe-img-wrapper');
+        const recipeImg = document.createElement('img');
+        recipeImg.setAttribute('src', image);
+        recipeImgWrapper.appendChild(recipeImg);
+        recipeCard.appendChild(recipe);
+        recipeCard.appendChild(recipeImgWrapper);
+
+        // Place card into appropriate card group
+        addCardToGroup(recipeCard, 'base');
+        calculateTotals()
+
+    }
+
+
 }
     function addCardToGroup(elm, cardgroup) {
         let parentCardGroup;
@@ -147,6 +156,7 @@ function createCards(data) {
                 break;
         }
         parentCardGroup.appendChild(elm);
+
     }
 
  function favouriteRecipe() {
@@ -158,12 +168,48 @@ function createCards(data) {
              if (!icon.classList.contains('favourite')) {
                  icon.classList.add('favourite');
                  addCardToGroup(icon.parentElement.parentElement,'favourite');
+                 calculateTotals();
              } else {
                  icon.classList.remove('favourite');
                  addCardToGroup(icon.parentElement.parentElement,'base');
+                 calculateTotals();
              }
          })
      }
+ }
+ function calculateTotals() {
+     let regTotalMinutes =[],regTotalServings=[],favTotalMinutes=[],favTotalServings=[];
+    const favTotalServingsLabel = document.getElementById('fav-total-servings');
+    const favTotalMinutesLabel = document.getElementById('fav-total-minutes');
+    const regTotalServingsLabel =document.getElementById('reg-total-servings');
+    const regTotalMinutesLabel =document.getElementById('reg-total-minutes');
+    let regMinutes = document.querySelectorAll('#recipe-group .minutes');
+    let regServings = document.querySelectorAll('#recipe-group .servings');
+    let favMinutes = document.querySelectorAll('#favourites .minutes');
+    let favServings = document.querySelectorAll('#favourites .servings');
+     for (const regMinute of regMinutes) {
+         regTotalMinutes.push(regMinute.innerHTML.split(' ')[0])
+     }
+     for (const regServing of regServings) {
+         regTotalServings.push(regServing.innerHTML.split(' ')[0])
+     }
+     for (const favMinute of favMinutes) {
+         favTotalMinutes.push(favMinute.innerHTML.split(' ')[0])
+     }
+     for (const favServing of favServings) {
+         favTotalServings.push(favServing.innerHTML.split(' ')[0])
+     }
+     let reducedFTM = favTotalMinutes.reduce(function (acc,minute) {return acc+parseInt(minute)},0);
+     let reducedFTS = favTotalServings.reduce(function(acc,servings) {return acc+parseInt(servings)},0);
+     let reducedRTM = regTotalMinutes.reduce(function (acc,minute) {return acc+parseInt(minute)},0);
+     let reducedRTS = regTotalServings.reduce(function(acc,servings) {return acc+parseInt(servings)},0);
+
+     // console.log(regTotalMinutes.reduce(function (acc,minute) {return acc+minute},0));
+     console.log(regTotalMinutes);
+     favTotalMinutesLabel.innerText = `${reducedFTM} Total Minutes to Prepare`;
+     favTotalServingsLabel.innerText = `${reducedFTS} Total Servings`;
+     regTotalMinutesLabel.innerText = `${reducedRTM} Total Minutes to Prepare`;
+     regTotalServingsLabel.innerText = `${reducedRTS} Total Servings`;
  }
 
 

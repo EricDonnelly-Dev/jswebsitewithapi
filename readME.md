@@ -11,7 +11,7 @@
 4. - [x] Build a function to remove an item from the "favorites" list.
      - When a user removes an item from the "favorites" list, the item is added back to the "collection" of items.
 5. - [x] Build a toggle function that sorts the items in the collection and "favorites" list alphabetically (A-Z) and vice versa (Z-A).
-6.  - [ ] You must display the total sum of some piece of data from the list. (i.e. if you had a list of pokemon, you could total the number of common, rare and legendary pokemon in the list). You cannot total the number of items in the array, it must be a value from the data object.
+6.  - [x] You must display the total sum of some piece of data from the list. (i.e. if you had a list of pokemon, you could total the number of common, rare and legendary pokemon in the list). You cannot total the number of items in the array, it must be a value from the data object.
 7.  - [x] The website must be built with pure HTML, CSS and JavaScript (no third party css or js libraries).
 8. - [x] The items retrieved from the API must be displayed in styled HTML. (i.e. if you were working with the pokeAPI you could display the data in a "card" design with the image, attack, hitpoints, etc).
 9.  - [x] The website must be mobile responsive across desktop, ipad/tablet and mobile phones.

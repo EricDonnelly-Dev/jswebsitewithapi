@@ -51,7 +51,12 @@
 .sort-link.active {
     color: #495fef;
 }
-
+.group-info{
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
 #recipe-group,
 #favourites {
     margin: 0 auto;
