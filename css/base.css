@@ -55,3 +55,15 @@
     border-radius: 1.25rem;
     max-width: var(--size-100);
 }
+.header-large{
+    font-size: 5rem;
+    letter-spacing: -2.5px;
+    line-height: 1.05;
+    text-align: center;
+}
+.block {
+    display: block;
+}
+.w100 {
+    width: 100%;
+}

@@ -9,11 +9,6 @@
 </head>
 <body>
 <!-- Place for Searching Recipe Cards-->
-<div id="favourites">
-
-</div>
-
-
 <section class="recipes">
     <div class="search-container container">
         <label for="search">
@@ -32,9 +27,17 @@
             <li data-filter="main dish" class="filter-link">Main Dish</li>
             <li data-filter="side dish" class="filter-link">Side Dish</li>
         </ul>
+        <ul class="ul-defaults-none sort-nav">
+            <li data-sort="AZ" class="sort-link"> A &rarrtl; Z</li>
+            <li data-sort="ZA" class="sort-link"> Z &rarrtl; A</li>
+        </ul>
     </div>
-
-    <div id="recipe-group"></div>
+    <div id="favourites">
+        <h1 class="header-large w100 block"> Favourite Recipes</h1>
+    </div>
+    <div id="recipe-group">
+        <h1 class="header-large w100 block"> Other Recipes</h1>
+    </div>
 </section>
 <script src="js/main.js"></script>
 </body>
